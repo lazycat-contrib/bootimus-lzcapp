@@ -10,7 +10,6 @@ application:
       protocol: tcp
   public_path:
     - /admin
-
 usage: |
   安装后，管理员密码会在首次启动时自动生成。
   查看应用日志，搜索 "Password" 即可找到管理员密码。
@@ -20,11 +19,11 @@ usage: |
   - TFTP: 69/udp
   - HTTP 启动文件: 8080/tcp
   请在部署参数中设置宿主机局域网 IP（BOOTIMUS_SERVER_ADDR）。
-
 services:
   bootimus:
     # garybowers/bootimus:0.1.76
-    image: docker.1ms.run/garybowers/bootimus:0.1.76
+    # upstream: garybowers/bootimus:0.1.76
+    image: registry.lazycat.cloud/czyt/garybowers/bootimus:1efa10a35b671ee9
     environment:
       - BOOTIMUS_TFTP_PORT=69
       - BOOTIMUS_HTTP_PORT=8080
