@@ -1,0 +1,33 @@
+application:
+  subdomain: bootimus
+  upstreams:
+    - location: /admin
+      backend: http://bootimus:8081/
+  ingress:
+    - port: 69
+      protocol: udp
+    - port: 8080
+      protocol: tcp
+  public_path:
+    - /admin
+
+usage: |
+  安装后，管理员密码会在首次启动时自动生成。
+  查看应用日志，搜索 "Password" 即可找到管理员密码。
+  管理界面访问路径: /admin
+
+  PXE 客户端通过宿主机局域网 IP 访问以下端口：
+  - TFTP: 69/udp
+  - HTTP 启动文件: 8080/tcp
+  请在部署参数中设置宿主机局域网 IP（BOOTIMUS_SERVER_ADDR）。
+
+services:
+  bootimus:
+    # garybowers/bootimus:0.1.76
+    image: docker.1ms.run/garybowers/bootimus:0.1.76
+    environment:
+      - BOOTIMUS_TFTP_PORT=69
+      - BOOTIMUS_HTTP_PORT=8080
+      - BOOTIMUS_ADMIN_PORT=8081
+      binds:
+      - /lzcapp/var/data:/data

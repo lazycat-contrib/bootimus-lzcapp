@@ -1,0 +1,8 @@
+manifest: ./lzc-manifest.yml
+pkgout: ./dist
+icon: ./icon.png
+compose_override:
+  services:
+    bootimus:
+      cap_add:
+        - NET_BIND_SERVICE
