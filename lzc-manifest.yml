@@ -29,5 +29,5 @@ services:
       - BOOTIMUS_TFTP_PORT=69
       - BOOTIMUS_HTTP_PORT=8080
       - BOOTIMUS_ADMIN_PORT=8081
-      binds:
+    binds:
       - /lzcapp/var/data:/data
