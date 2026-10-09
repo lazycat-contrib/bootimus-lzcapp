@@ -4,9 +4,8 @@ name: Bootimus
 description: "A Complete enhanced version of the PXE server supporting booting from ISOs written in Golang and Deployable via containers or binaries."
 min_os_version: 1.5.0
 author: garybowers
-license: MIT
+license: Apache-2.0
 homepage: https://github.com/garybowers/bootimus
-
 locales:
   en:
     name: "Bootimus"
@@ -14,7 +13,6 @@ locales:
   zh:
     name: "Bootimus"
     description: "基于 Golang 的增强版 PXE 服务器，支持从 ISO 文件启动，可通过容器或二进制部署。"
-
 permissions:
   required:
     - net.internet
