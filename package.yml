@@ -1,5 +1,5 @@
 package: community.lazycat.app.bootimus
-version: 0.1.76
+version: 0.1.77
 name: Bootimus
 description: "A Complete enhanced version of the PXE server supporting booting from ISOs written in Golang and Deployable via containers or binaries."
 min_os_version: 1.5.0
