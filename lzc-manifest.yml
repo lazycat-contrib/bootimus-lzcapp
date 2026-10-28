@@ -22,8 +22,8 @@ usage: |
 services:
   bootimus:
     # garybowers/bootimus:0.1.76
-    # upstream: garybowers/bootimus:0.1.78
-    image: registry.lazycat.cloud/czyt/garybowers/bootimus:10410cf05c4d5199
+    # upstream: garybowers/bootimus:0.1.79
+    image: registry.lazycat.cloud/czyt/garybowers/bootimus:a4af8546b0a14679
     environment:
       - BOOTIMUS_TFTP_PORT=69
       - BOOTIMUS_HTTP_PORT=8080
